@@ -29,6 +29,8 @@ export function Favorites() {
   };
 
   const pagination = (moviesData) => {
+    if (!moviesData) return { items: [] };
+
     const itemsPerPage = 4;
     const totalPages = Math.ceil(moviesData.length / itemsPerPage);
     const items = [];
