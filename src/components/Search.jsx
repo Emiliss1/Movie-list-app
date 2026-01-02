@@ -20,12 +20,10 @@ export function Search() {
     } else {
       setStorageMovies([]);
     }
-    console.log("stor", movs);
   }, []);
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    console.log(storageMovies);
     setIsLoading(true);
     if (search.trim(" ")) {
       try {
@@ -40,18 +38,14 @@ export function Search() {
           setIsLoading(false);
         } else {
           // const newResponse = response.data.Search.map((res, index) => {
-          //   console.log("res", res);
           //   const image = new Image();
           //   image.src = res.Poster;
           //   if (image.width > 0) {
           //     return res;
           //   }
           // });
-          // console.log(response);
-          // console.log("neww", response.data.Search);
 
           // setMovies(newResponse);
-          // console.log(movies);
           setMovies(response.data.Search);
           setIsLoading(false);
         }
@@ -67,17 +61,13 @@ export function Search() {
   };
 
   const handleSetFavorite = (movie) => {
-    console.log("storageeeeee", storageMovies);
-
     const data = [...storageMovies, movie];
-    console.log("data", data);
 
     if (storageMovies) {
       setStorageMovies((prev) => [movie, ...prev]);
     } else {
       setStorageMovies([movie]);
     }
-    console.log("storageeeeee", storageMovies);
 
     localStorage.setItem("favorites", JSON.stringify(data));
   };
@@ -91,9 +81,6 @@ export function Search() {
       localStorage.removeItem("favorites");
       setStorageMovies([]);
     }
-    console.log("storagasdsad", storageMovies);
-
-    console.log("storag", data);
   };
 
   return (

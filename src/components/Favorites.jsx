@@ -52,7 +52,6 @@ export function Favorites() {
 
     setLastPage(totalPages);
 
-    console.log("current", curPage);
     return {
       items,
     };
