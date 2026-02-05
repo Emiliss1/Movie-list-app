@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen grow">
       <div className="w-5/6 sm:w-96 rounded-sm py-1 flex items-center justify-center mt-20 bg-orange-400 h-max mx-auto">
-        <h1 className="text-center text-6xl  text-orange-100 ">Movie App</h1>
+        <h1 className="text-center text-6xl  text-orange-100 ">Movie List</h1>
       </div>
       <div className="w-11/12 lg:w-[1000px] bg-white h-max pb-4 mb-28 mx-auto mt-10">
         <div className="flex sm:flex-row flex-col sm:gap-0 gap-2 items-center border-b-2 border-orange-300 w-11/12 mx-auto py-4 justify-around">
